@@ -55,6 +55,8 @@ int main(int argc, char *argv[]) {
   if(shouldQuit)
     return 0;
 
+  QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
   auto debug_enabled = parser.isSet("debug");
   if(debug_enabled) {
     qDebug() << a.arguments();
